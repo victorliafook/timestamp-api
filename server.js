@@ -13,7 +13,7 @@ app.get('/:par', function(req, res){
     }else{
         date = new Date(parseInt(req.params.par));
         if(!isNaN( date.getTime())){
-            time.unix = date.getTime();
+            time.unix = date.getTime()/1000;
             time.natural = date.toDateString();
         }
     }
