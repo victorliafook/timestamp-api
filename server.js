@@ -20,7 +20,7 @@ app.get('/:par', function(req, res){
    
     res.json(time);
 })
-app.listen(8080);
+app.listen(process.env.PORT || 8081);
 
 
 function TimeObj(){
